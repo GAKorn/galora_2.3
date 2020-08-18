@@ -1,0 +1,16 @@
+/*
+//collision stuff goes here
+#region Capturing Collision Points
+	var right_top = get_coll_point(bbox_right, 1, bbox_top, 0); //right side, top point
+	var right_mid = get_coll_point(bbox_right, 1, bbox_bottom, sprite_height/2); //right side, middle point
+	var right_bot = get_coll_point(bbox_right, 1, bbox_bottom, 1); //right side, bottom point
+	var left_top = get_coll_point(bbox_left, 0, bbox_top, 0); //left side, top point
+	var left_mid = get_coll_point(bbox_left, 0, bbox_bottom, sprite_height/2); //left side, middle point
+	var left_bot = get_coll_point(bbox_left, 0, bbox_bottom, 1); //left side, bottom point
+	var top_left = get_coll_point(bbox_left, 0, bbox_top, 0); //top side, left point
+	var top_mid = get_coll_point(bbox_right, sprite_width/2, bbox_top, 0); //top side, middle point
+	var top_right = get_coll_point(bbox_right, 1, bbox_top, 0); //top side, right point
+	var bot_left = get_coll_point(bbox_left, 0, bbox_bottom, 1); //bottom side, left point
+	var bot_mid = get_coll_point(bbox_right, sprite_width/2, bbox_bottom, 1); //bottom side, middle point
+	var bot_right = get_coll_point(bbox_right, 1, bbox_bottom, 1); //bottom side, right point
+#endregion

@@ -1,0 +1,17 @@
+- Combat
+	- Combo buffer - NOT YET
+	- Up to 2 attacks - NOT YET
+	- A way to upggrade it by levels or other stuff - NOT YET
+	- If on air, gives another jump option if hits something - DONE
+	- Simple Enemy obj
+		- Simple FSM for enemies, updatable for various types of enemies - NOT YET
+		- Parent enemy object to test stuff - DONE
+		- Spawn money and xp when destroyed - DONE
+
+- Dialog
+- Quest
+- Pause Menu
+	- Equipment
+	- Map
+	- Quests
+	- Stats
