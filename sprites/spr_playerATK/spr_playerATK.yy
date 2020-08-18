@@ -97,7 +97,7 @@
   ],
   "parent": {
     "name": "PlayerSprites",
-    "path": "folders/Sprites/Player/PlayerSprites.yy",
+    "path": "folders/_Player/Sprites/PlayerSprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_playerATK",

@@ -29,17 +29,11 @@ if (global.kPause){
 //restarting room
 if (keyboard_check_pressed(ord("R"))) room_restart();
 
-//giving the player the wall jump
-if (keyboard_check_pressed(ord("P"))) global.wallUpgrade = true;
-
-//giving the player the double jump
-if (keyboard_check_pressed(ord("O"))) global.doubleJump = true;
-
-//giving the player the jumpreset
-if (keyboard_check_pressed(ord("L"))) global.jumpReset = true;
-
-//giving the player the jumpreset
-if (keyboard_check_pressed(ord("M"))) global.magneticRelic = true;
+global.doubleJump = true;					//checks if player has the double jump upgrade
+global.wallUpgrade = true;					//checks if the player can wall jump
+global.jumpReset = true;					//checks if the player can reset jump in midair
+global.magneticRelic = true;				//checks for the magnetic relic equipped
+global.canDash = true;						//checks if player can dash
 
 //gerando o loot para teste
 if (mouse_check_button_pressed(mb_left)){

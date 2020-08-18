@@ -13,6 +13,7 @@ function get_input(){
 		global.kJump = gamepad_button_check_pressed(_pad, gp_face1);
 		global.kJump_Held = gamepad_button_check(_pad, gp_face1);
 		global.kDrop = (global.kJump or global.kJump_Held) and global.kDown;
+		global.kDash = gamepad_button_check_pressed(_pad, gp_face2);
 		global.kRun = gamepad_button_check(_pad, gp_shoulderlb);
 		global.kWall = gamepad_button_check(_pad, gp_shoulderrb);
 		global.kInteract = gamepad_button_check_pressed(_pad, gp_face4);
@@ -30,6 +31,7 @@ function get_input(){
 		global.kJump = keyboard_check_pressed(ord("S"));
 		global.kJump_Held = keyboard_check(ord("S"));
 		global.kDrop = (global.kJump or global.kJump_Held) and global.kDown;
+		global.kDash = keyboard_check_pressed(ord("C"));
 		global.kRun = keyboard_check(vk_shift);
 		global.kWall = keyboard_check(ord("A"));
 		global.kInteract = keyboard_check_pressed(ord("E"));

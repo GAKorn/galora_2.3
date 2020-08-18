@@ -35,7 +35,7 @@
     "spriteId": {"name":"spr_playerJUMP","path":"sprites/spr_playerJUMP/spr_playerJUMP.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 15.0,
+    "playbackSpeed": 4.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
@@ -73,7 +73,7 @@
   ],
   "parent": {
     "name": "PlayerSprites",
-    "path": "folders/Sprites/Player/PlayerSprites.yy",
+    "path": "folders/_Player/Sprites/PlayerSprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_playerJUMP",

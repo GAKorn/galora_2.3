@@ -19,6 +19,8 @@ global.hasGamepad = false;
 #macro Platform 2
 #macro wall_alarm 3
 #macro hasPlayer instance_exists(global.player)
+#macro yes true
+#macro no false
 
 
 	#endregion

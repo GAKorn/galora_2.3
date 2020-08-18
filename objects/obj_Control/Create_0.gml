@@ -31,6 +31,7 @@ global.doubleJump = false;					//checks if player has the double jump upgrade
 global.wallUpgrade = false;					//checks if the player can wall jump
 global.jumpReset = false;					//checks if the player can reset jump in midair
 global.magneticRelic = false;				//checks for the magnetic relic equipped
+global.canDash = false;						//checks if player can dash
 //other upgrades might come here
 
 //some attributes upgraded by level

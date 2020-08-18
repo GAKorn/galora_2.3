@@ -136,3 +136,23 @@ function animation_end(){
 }
 	
 	#endregion
+	
+	#region Animation Loop
+/// @description Chance(percent)
+/// @param loop
+
+function animation_loop(loop){
+//make animation loop - USE WHEN NOT USING ANIMATION END
+
+	
+		if (loop) {
+			if (image_index >= (image_number-1)) image_index = 1;
+		} else {
+			if (image_index >= (image_number-1)) image_speed = 0;
+		}
+	
+	
+}
+
+	
+	#endregion

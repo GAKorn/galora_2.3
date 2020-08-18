@@ -2,31 +2,39 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function playerIDLE(){
 	//defining sprite
-	sprite_index = spr_playerIDLE;
+	var _spr = spr_playerIDLE
+	sprite_index = _spr;
 	
 	STA += 0.1;
 	//i check collision in the begin step event of the player, so not here
 	
 	if (global.kAtk and !global.isCity) state = pStates.atk;
+	else if (dashAble = true and global.canDash and global.kDash) state = pStates.dash;
 	else if (global.kJump or global.kJump_Held) state = pStates.air;
 	else if (global.kLeft or global.kRight) state = pStates.walk;
 }
 
 function playerWALK(){
-	sprite_index = spr_playerWALK;
+	
+	var _spr = spr_playerWALK;
+	sprite_index = _spr;
 	
 	STA += 0.05;
 	
 	if (global.kAtk and !global.isCity) state = pStates.atk;
+	else if (dashAble = true and global.canDash and global.kDash) state = pStates.dash;
 	else if (global.kJump or global.kJump_Held) state = pStates.air;
 	else if (abs(hSpd) > 2) state = pStates.jog;
 	else if (abs(hSpd) <= 0) state = pStates.idle;
 }
 
 function playerJOG(){
-	sprite_index = spr_playerJOG;
+	
+	var _spr = spr_playerJOG;
+	sprite_index = _spr;
 	
 	if (global.kAtk and !global.isCity) state = pStates.atk;
+	else if (dashAble = true and global.canDash and global.kDash) state = pStates.dash;
 	else if (global.kJump or global.kJump_Held) state = pStates.air;
 	else if (abs(hSpd) > 5) state = pStates.run;
 	else if (abs(hSpd) <= 2) state = pStates.walk;
@@ -35,21 +43,46 @@ function playerJOG(){
 }
 
 function playerRUN(){
-	sprite_index = spr_playerRUN;
+	
+	var _spr = spr_playerRUN;
+	sprite_index = _spr;
 	
 	STA -= 0.1;
 	
 	if (global.kAtk and !global.isCity) state = pStates.atk;
+	else if (dashAble = true and global.canDash and global.kDash) state = pStates.dash;
 	else if (global.kJump or global.kJump_Held) state = pStates.air;
 	else if (abs(hSpd) <= 5 or STA < 1) state = pStates.jog;
 	else if (abs(hSpd) <= 2 or STA < 1) state = pStates.walk;
 	else if (abs(hSpd) <= 0 or STA < 1) state = pStates.idle;
 }
 
+function playerDASH(){
+	var _spr = spr_playerDASH;
+	sprite_index = _spr;
+	
+	dashAble = false;
+	hSpd = 0
+	vSpd = 0;
+	hSpd += facing*10;
+	
+	if (animation_end()) {
+		alarm[4] = room_speed*0.4;
+		if (!on_ground) state = pStates.air;
+		else if (global.kLeft or global.kRight) state = pStates.walk;
+		else state = pStates.idle;
+	}
+}
+
 function playerJUMP(){
-	sprite_index = spr_playerJUMP;
+	
+	var _spr = spr_playerJUMP;
+	sprite_index = _spr;
+	if (animation_end(_spr)) image_speed = 0;
+	else image_speed = 1;
 	
 	if (global.kAtk and !global.isCity) state = pStates.airAtk;
+	else if (dashAble = true and global.canDash and global.kDash) state = pStates.dash;
 	else if (vSpd == 0) state = pStates.air;
 	else if (vSpd > 0) state = pStates.fall;
 	else if ((wallLeft or wallRight) and global.kWall) state = pStates.wall;
@@ -57,18 +90,28 @@ function playerJUMP(){
 }
 
 function playerAIR(){
-	sprite_index = spr_playerAIR;
+	
+	var _spr = spr_playerAIR;
+	sprite_index = _spr;
+	if (animation_end(_spr)) image_speed = 0;
+	else image_speed = 1;
 	
 	if (global.kAtk and !global.isCity) state = pStates.airAtk;
+	else if (dashAble = true and global.canDash and global.kDash) state = pStates.dash;
 	else if (vSpd < 0) state = pStates.jump;
 	else if (vSpd > 0) state = pStates.fall;
 
 }
 
 function playerFALL(){
-	sprite_index = spr_playerFALL;
+	
+	var _spr = spr_playerFALL;
+	sprite_index = _spr;
+	if (animation_end(_spr)) image_speed = 0;
+	else image_speed = 1;
 	
 	if (global.kAtk and !global.isCity) state = pStates.airAtk;
+	else if (dashAble = true and global.canDash and global.kDash) state = pStates.dash;
 	else if (vSpd == 0) state = pStates.air;
 	else if ((wallLeft or wallRight) and global.kWall) state = pStates.wall;
 	else if (on_ground()) state = pStates.land;
@@ -163,6 +206,7 @@ function playerAirATK(){
 			var hitID = hitByAttackNOW[| i]; //the | finds somethingg in the list, its equal to ds_list_find_value
 			if (ds_list_find_index(hitByAttack, hitID) == -1){
 				ds_list_add(hitByAttack, hitID);
+				if (global.jumpReset) jumpAmount += 1;
 				with (hitID){
 					//enemy_hit(2);
 					instance_destroy();
@@ -174,7 +218,6 @@ function playerAirATK(){
 	mask_index = spr_playerColl;
 	
 	if (animation_end()) {
-		if (global.jumpReset) jumpAmount += 1;
 		state = pStates.air;
 	}
 	

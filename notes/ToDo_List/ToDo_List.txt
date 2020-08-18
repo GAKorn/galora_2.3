@@ -1,3 +1,6 @@
+- DASH
+	- Check reason for locking in dash.
+
 - Combat
 	- Combo buffer - NOT YET
 	- Up to 2 attacks - NOT YET

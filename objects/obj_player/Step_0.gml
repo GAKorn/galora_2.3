@@ -1,6 +1,13 @@
 /// @description Always
 //scripts for controls
-get_input();
+
+//input control
+if (dashAble) canInput = true;
+else canInput = false;
+
+if (canInput) get_input();
+
+//movement
 calc_movement();
 jumped();
 
@@ -28,20 +35,21 @@ dmgRED = playerRedDMG(armorDEF, global.playerDEF, defMod1, defMod2, defMod3, def
 	
 	#region The State Machine
 switch state{
-	case pStates.idle: playerIDLE(); break;
-	case pStates.walk: playerWALK(); break;
-	case pStates.jog: playerJOG(); break;
-	case pStates.run: playerRUN(); break;
-	case pStates.air: playerAIR(); break;
-	case pStates.jump: playerJUMP(); break;
-	case pStates.fall: playerFALL(); break;
-	case pStates.atk: playerATK(); break;
-	case pStates.airAtk: playerAirATK(); break;
-	case pStates.wall: playerWALL(); break;
-	case pStates.dialog: playerDIALOG(); break;
-	case pStates.interact: playerINTERACT(); break;
-	case pStates.death: playerDEATH(); break;	
-	case pStates.land: playerLAND(); break;
+	case	pStates.idle:			playerIDLE();			break;
+	case	pStates.walk:			playerWALK();			break;
+	case	pStates.jog:			playerJOG();			break;
+	case	pStates.run:			playerRUN();			break;
+	case	pStates.dash:			playerDASH();			break;
+	case	pStates.air:			playerAIR();			break;
+	case	pStates.jump:			playerJUMP();			break;
+	case	pStates.fall:			playerFALL();			break;
+	case	pStates.atk:			playerATK();			break;
+	case	pStates.airAtk:			playerAirATK();			break;
+	case	pStates.wall:			playerWALL();			break;
+	case	pStates.dialog:			playerDIALOG();			break;
+	case	pStates.interact:		playerINTERACT();		break;
+	case	pStates.death:			playerDEATH();			break;	
+	case	pStates.land:			playerLAND();			break;
 }
 
 //show_debug_message("Atk: "+string(DMG)+"/ Def: "+string(dmgRED));

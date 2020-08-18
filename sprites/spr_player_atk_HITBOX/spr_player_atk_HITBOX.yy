@@ -96,8 +96,8 @@
     {"visible":false,"isLocked":true,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e175ee5b-1261-4bcc-84da-da172de0cc5e","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Player",
-    "path": "folders/Sprites/Player.yy",
+    "name": "Sprites",
+    "path": "folders/_Player/Sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_player_atk_HITBOX",

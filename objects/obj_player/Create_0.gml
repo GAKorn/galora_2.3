@@ -10,6 +10,9 @@ max_hSpd = 4;
 dec_hSpd = 0;
 fric = .12;
 
+dashAble = true;
+canInput = true;
+
 //vertical speeds
 vSpd = 0;
 max_vSpd = 10;
@@ -53,6 +56,7 @@ enum pStates{
 	walk,
 	jog,
 	run,
+	dash,
 	air,
 	jump,
 	fall,
