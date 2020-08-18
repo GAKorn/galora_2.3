@@ -1,0 +1,18 @@
+The enemy for the intro stage.
+Aside from it, the level will only have a boss fight.
+
+Shape:
+- A warrior with some sort of hispanic/indian (some like Mayans or Incas) skin color.
+- It features a spear and armor in the style of the roman legion.
+
+Behavior
+- Idle: Stands a bit.
+- Walk: It's patrolling an area.
+- Attack: attacks the player with some anticipation frames
+- Hurt: suffer damage from the player attacks
+- Death: when HP <= 0, death animation plays
+
+Behavioral change
+Walk a certai area > Stops in idle for 1 second > Walks certain area in the oposite direction > Repeat
+Sees the player: walks towards the player.
+Player in range: attacks

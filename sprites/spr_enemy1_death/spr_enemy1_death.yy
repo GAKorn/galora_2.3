@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"7ee21052-18ef-48da-9208-1c23d7b1cb54","path":"sprites/spr_enemyPAR/spr_enemyPAR.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7ee21052-18ef-48da-9208-1c23d7b1cb54","path":"sprites/spr_enemyPAR/spr_enemyPAR.yy",},"LayerId":{"name":"e175ee5b-1261-4bcc-84da-da172de0cc5e","path":"sprites/spr_enemyPAR/spr_enemyPAR.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_enemyPAR","path":"sprites/spr_enemyPAR/spr_enemyPAR.yy",},"resourceVersion":"1.0","name":"7ee21052-18ef-48da-9208-1c23d7b1cb54","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"7ee21052-18ef-48da-9208-1c23d7b1cb54","path":"sprites/spr_enemy1_death/spr_enemy1_death.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"7ee21052-18ef-48da-9208-1c23d7b1cb54","path":"sprites/spr_enemy1_death/spr_enemy1_death.yy",},"LayerId":{"name":"e175ee5b-1261-4bcc-84da-da172de0cc5e","path":"sprites/spr_enemy1_death/spr_enemy1_death.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_enemy1_death","path":"sprites/spr_enemy1_death/spr_enemy1_death.yy",},"resourceVersion":"1.0","name":"7ee21052-18ef-48da-9208-1c23d7b1cb54","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_enemyPAR","path":"sprites/spr_enemyPAR/spr_enemyPAR.yy",},
+    "spriteId": {"name":"spr_enemy1_death","path":"sprites/spr_enemy1_death/spr_enemy1_death.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 15.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"67d62a21-51b2-4b6b-b99a-be5c0c262874","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7ee21052-18ef-48da-9208-1c23d7b1cb54","path":"sprites/spr_enemyPAR/spr_enemyPAR.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"fca1240f-444a-4649-9084-d09706df0c49","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7ee21052-18ef-48da-9208-1c23d7b1cb54","path":"sprites/spr_enemy1_death/spr_enemy1_death.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,9 +58,9 @@
     "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_enemyPAR","path":"sprites/spr_enemyPAR/spr_enemyPAR.yy",},
+    "parent": {"name":"spr_enemy1_death","path":"sprites/spr_enemy1_death/spr_enemy1_death.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_enemyPAR",
+    "name": "spr_enemy1_death",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -68,11 +68,11 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e175ee5b-1261-4bcc-84da-da172de0cc5e","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Enemy",
-    "path": "folders/Sprites/Enemy.yy",
+    "name": "Sprites",
+    "path": "folders/Enemies/Enemies/Enemy1/Sprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_enemyPAR",
+  "name": "spr_enemy1_death",
   "tags": [],
   "resourceType": "GMSprite",
 }

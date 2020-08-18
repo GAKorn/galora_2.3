@@ -14,3 +14,14 @@ else xp = 15;
 
 eXP_factor = ceil(xp+eATK+eDEF*eLVL);
 eMoney_factor = floor(eXP_factor*0.6);
+
+enum e1States {
+	idle,
+	walk,
+	attack,
+	hurt,
+	death,	
+	
+}
+
+state = e1States.idle;

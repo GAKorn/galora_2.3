@@ -1,11 +1,14 @@
 {
   "spriteId": {
-    "name": "spr_enemyPAR",
-    "path": "sprites/spr_enemyPAR/spr_enemyPAR.yy",
+    "name": "spr_enemy1_Idle",
+    "path": "sprites/spr_enemy1_Idle/spr_enemy1_Idle.yy",
   },
   "solid": false,
   "visible": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "spr_enemy1_Idle",
+    "path": "sprites/spr_enemy1_Idle/spr_enemy1_Idle.yy",
+  },
   "persistent": false,
   "parentObjectId": {
     "name": "obj_enemyPAR",
@@ -25,12 +28,13 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_enemy1","path":"objects/obj_enemy1/obj_enemy1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_enemy1","path":"objects/obj_enemy1/obj_enemy1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Enemies",
-    "path": "folders/Objects/Enemies.yy",
+    "name": "Enemy1",
+    "path": "folders/Enemies/Enemies/Enemy1.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_enemy1",
